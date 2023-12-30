@@ -5,11 +5,12 @@ import App from './App'
 
 //Google Analytics
 import ReactGA from 'react-ga4'
-ReactGA.initialize('G-5PWBRCCWND')
+ReactGA.initialize("G-5PWBRCCWND")
 
 ReactGA.send({
-  hitType: "pageView",
-  page: window.location.pathname
+  hitType: "pageview",
+  page: window.location.pathname,
+  title: "test"
 })
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
