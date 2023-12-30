@@ -5,7 +5,7 @@ import App from './App'
 
 //Google Analytics
 import ReactGA from 'react-ga4'
-ReactGA.initialize("G-5PWBRCCWND")
+ReactGA.initialize("G-5PKG573GLN")
 
 ReactGA.send({
   hitType: "pageview",
