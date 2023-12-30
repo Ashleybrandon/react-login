@@ -6,6 +6,15 @@ export const UsePageViews = () => {
   let location = useLocation()
 
   useEffect(() => {
-    ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
+
+    const pageTitle = location.pathname === '/home' ? 'Home' :
+                      location.pathname === '/about' ? 'About' :
+                      location.pathname === '/news' ? 'News' : 'React App'
+    
+    ReactGA.send({
+      hitType: 'pageview',
+      page: location.pathname,
+      title: pageTitle
+    })  
   }, [location])
 }
