@@ -1,6 +1,4 @@
-import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import ReactGA from 'react-ga'
 
 export const Nav = () => {
     return (
@@ -29,33 +27,18 @@ export const Logout = ({onLogout}) => {
 }
 
 export const Home = () => {
-    //Send page view to GA
-    useEffect(() => {
-        ReactGA.pageview(window.location.pathname)
-        }, [])
-
     return (
         <div>Home</div>
     )
 }
 
 export const About = () => {
-    //Send page view to GA
-    useEffect(() => {
-        ReactGA.pageview(window.location.pathname)
-        }, [])
-
     return (
         <div>About</div>
     )
 }
 
 export const News = () => {
-    //Send page view to GA
-    useEffect(() => {
-        ReactGA.pageview(window.location.pathname)
-        }, [])
-
     return (
         <div>News</div>
     )

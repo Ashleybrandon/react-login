@@ -1,14 +1,9 @@
 import { useState } from 'react'
 import { Login, Logout, Nav, Home, About, News } from './Components'
 import { HashRouter as Router, Route, Link, Routes } from 'react-router-dom'
-
 //Styles
 import './App.css'
 
-//Google Analytics
-import ReactGA from 'react-ga'
-// ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_CODE)
-ReactGA.initialize('G-5PWBRCCWND')
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(
