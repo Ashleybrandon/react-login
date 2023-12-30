@@ -28,22 +28,20 @@ const App = () => {
 
   return (
     <div>
-      <Router>
-        {!isLoggedIn ? (
-          <Login onLogin={handleLogin} />
-        ) : (
-          <>
-            <Nav />
-            <Routes>
-              <Route path="*" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/news" element={<News />} />
-            </Routes>
-            <Logout onLogout={handleLogout} />
-          </>
-        )}
-      </Router>
+      {!isLoggedIn ? (
+        <Login onLogin={handleLogin} />
+      ) : (
+        <>
+          <Nav />
+          <Routes>
+            <Route path="*" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/news" element={<News />} />
+          </Routes>
+          <Logout onLogout={handleLogout} />
+        </>
+      )}
     </div>
   )
 }
